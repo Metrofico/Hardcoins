@@ -2,8 +2,8 @@ package me.metrofico.hardcoins.db;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.config.ConfigStruct;
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.config.ConfigStruct;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.scheduler.BukkitRunnable;
 

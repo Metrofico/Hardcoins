@@ -1,5 +1,14 @@
 package me.metrofico.hardcoins;
 
+
+import me.metrofico.hardcoins.command.Executer;
+import me.metrofico.hardcoins.config.ConfigStruct;
+import me.metrofico.hardcoins.config.MessageStruct;
+import me.metrofico.hardcoins.db.Database;
+import me.metrofico.hardcoins.db.rdbms.MySQL;
+import me.metrofico.hardcoins.db.rdbms.SQLite;
+import me.metrofico.hardcoins.listener.Login;
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,14 +20,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import jp.jyn.jecon.command.Executer;
-import jp.jyn.jecon.config.ConfigStruct;
-import jp.jyn.jecon.config.MessageStruct;
-import jp.jyn.jecon.db.Database;
-import jp.jyn.jecon.db.rdbms.MySQL;
-import jp.jyn.jecon.db.rdbms.SQLite;
-import jp.jyn.jecon.listener.Login;
-import net.milkbowl.vault.economy.Economy;
+
 
 public class Jecon extends JavaPlugin {
 

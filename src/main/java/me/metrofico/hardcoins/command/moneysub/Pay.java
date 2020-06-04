@@ -1,13 +1,11 @@
 package me.metrofico.hardcoins.command.moneysub;
 
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.command.MoneyCommand;
+import me.metrofico.hardcoins.config.MessageStruct;
+import me.metrofico.hardcoins.db.Database;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.command.MoneyCommand;
-import jp.jyn.jecon.config.MessageStruct;
-import jp.jyn.jecon.db.Database;
-import jp.jyn.jecon.db.Database.Reason;
 
 public class Pay implements MoneyCommand {
 
@@ -72,7 +70,7 @@ public class Pay implements MoneyCommand {
 		String result;
 		String displayAmount = db.format(amount);
 		// まずは出金
-		Reason reason = db.withdrawPlayer(from, amount);
+		Database.Reason reason = db.withdrawPlayer(from, amount);
 
 		switch (reason) {
 		case ACCOUNT_NOT_FOUND:
@@ -92,7 +90,7 @@ public class Pay implements MoneyCommand {
 				.replace(MessageStruct.MACRO_PLAYER, targetName)
 				.replace(MessageStruct.MACRO_BALANCE, displayAmount));
 		// 成功以外ならエラーで帰る
-		if (reason != Reason.SUCCESS) {
+		if (reason != Database.Reason.SUCCESS) {
 			return;
 		}
 

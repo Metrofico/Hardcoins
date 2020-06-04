@@ -5,21 +5,12 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.command.moneysub.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.command.moneysub.Create;
-import jp.jyn.jecon.command.moneysub.Give;
-import jp.jyn.jecon.command.moneysub.Help;
-import jp.jyn.jecon.command.moneysub.NoArgs;
-import jp.jyn.jecon.command.moneysub.Pay;
-import jp.jyn.jecon.command.moneysub.Reload;
-import jp.jyn.jecon.command.moneysub.Remove;
-import jp.jyn.jecon.command.moneysub.Set;
-import jp.jyn.jecon.command.moneysub.Take;
-import jp.jyn.jecon.command.moneysub.Top;
 
 public class Executer implements CommandExecutor {
 

@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 import com.zaxxer.hikari.HikariConfig;
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.db.Database;
 
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.db.Database;
 
 public class SQLite extends Database {
 

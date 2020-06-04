@@ -1,11 +1,11 @@
 package me.metrofico.hardcoins.command.moneysub;
 
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.command.MoneyCommand;
+import me.metrofico.hardcoins.config.MessageStruct;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.command.MoneyCommand;
-import jp.jyn.jecon.config.MessageStruct;
 
 public class Reload implements MoneyCommand {
 

@@ -1,10 +1,10 @@
 package me.metrofico.hardcoins;
 
-import jp.jyn.jecon.config.ConfigStruct;
-import jp.jyn.jecon.db.Database;
+
+import me.metrofico.hardcoins.config.ConfigStruct;
+import me.metrofico.hardcoins.db.Database;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
-import net.milkbowl.vault.economy.EconomyResponse.ResponseType;
 import org.bukkit.OfflinePlayer;
 
 import java.util.ArrayList;
@@ -97,30 +97,30 @@ public class VaultEconomy implements Economy {
 	@Override
 	public EconomyResponse depositPlayer(String playerName, double amount) {
 		if (amount < 0) {
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Can't deposit negative amount");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Can't deposit negative amount");
 		}
 		switch (db.depositPlayer(playerName, amount)) {
 		case ACCOUNT_NOT_FOUND:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Account not found");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Account not found");
 		case SUCCESS:
-			return new EconomyResponse(amount, db.getBalance(playerName), ResponseType.SUCCESS, "");
+			return new EconomyResponse(amount, db.getBalance(playerName), EconomyResponse.ResponseType.SUCCESS, "");
 		default:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Unknown error");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Unknown error");
 		}
 	}
 
 	@Override
 	public EconomyResponse depositPlayer(OfflinePlayer player, double amount) {
 		if (amount < 0) {
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Can't deposit negative amount");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Can't deposit negative amount");
 		}
 		switch (db.depositPlayer(player, amount)) {
 		case ACCOUNT_NOT_FOUND:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Account not found");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Account not found");
 		case SUCCESS:
-			return new EconomyResponse(amount, db.getBalance(player), ResponseType.SUCCESS, "");
+			return new EconomyResponse(amount, db.getBalance(player), EconomyResponse.ResponseType.SUCCESS, "");
 		default:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Unknown error");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Unknown error");
 		}
 	}
 
@@ -205,34 +205,34 @@ public class VaultEconomy implements Economy {
 	@Override
 	public EconomyResponse withdrawPlayer(String playerName, double amount) {
 		if (amount < 0) {
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Can't deposit negative amount");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Can't deposit negative amount");
 		}
 		switch (db.withdrawPlayer(playerName, amount)) {
 		case ACCOUNT_NOT_FOUND:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Account not found");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Account not found");
 		case NOT_ENOUGH:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Money is not enough");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Money is not enough");
 		case SUCCESS:
-			return new EconomyResponse(amount, db.getBalance(playerName), ResponseType.SUCCESS, "");
+			return new EconomyResponse(amount, db.getBalance(playerName), EconomyResponse.ResponseType.SUCCESS, "");
 		default:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Unknown error");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Unknown error");
 		}
 	}
 
 	@Override
 	public EconomyResponse withdrawPlayer(OfflinePlayer player, double amount) {
 		if (amount < 0) {
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Can't deposit negative amount");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Can't deposit negative amount");
 		}
 		switch (db.withdrawPlayer(player, amount)) {
 		case ACCOUNT_NOT_FOUND:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Account not found");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Account not found");
 		case NOT_ENOUGH:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Money is not enough");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Money is not enough");
 		case SUCCESS:
-			return new EconomyResponse(amount, db.getBalance(player), ResponseType.SUCCESS, "");
+			return new EconomyResponse(amount, db.getBalance(player), EconomyResponse.ResponseType.SUCCESS, "");
 		default:
-			return new EconomyResponse(0, 0, ResponseType.FAILURE, "Unknown error");
+			return new EconomyResponse(0, 0, EconomyResponse.ResponseType.FAILURE, "Unknown error");
 		}
 	}
 
@@ -318,6 +318,6 @@ public class VaultEconomy implements Economy {
 	}
 
 	private EconomyResponse notImplementedBank() {
-		return new EconomyResponse(0, 0, ResponseType.NOT_IMPLEMENTED, "Jecon does not support bank.");
+		return new EconomyResponse(0, 0, EconomyResponse.ResponseType.NOT_IMPLEMENTED, "Jecon does not support bank.");
 	}
 }

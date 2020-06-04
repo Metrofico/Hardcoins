@@ -1,6 +1,7 @@
 package me.metrofico.hardcoins;
 
-import jp.jyn.jecon.db.Database;
+
+import me.metrofico.hardcoins.db.Database;
 import org.bukkit.Bukkit;
 
 public class HardconAPI {

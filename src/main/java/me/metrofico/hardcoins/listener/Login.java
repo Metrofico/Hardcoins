@@ -1,9 +1,9 @@
 package me.metrofico.hardcoins.listener;
 
-import javafx.scene.layout.Priority;
-import jp.jyn.jecon.Jecon;
-import jp.jyn.jecon.config.ConfigStruct;
-import jp.jyn.jecon.db.Database;
+
+import me.metrofico.hardcoins.Jecon;
+import me.metrofico.hardcoins.config.ConfigStruct;
+import me.metrofico.hardcoins.db.Database;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

@@ -44,6 +44,7 @@ tasks.withType(JavaCompile) {
 
 dependencies {
     compileOnly(name: 'PaperSpigot-1.8.8-R0.1-SNAPSHOT', ext: 'jar')
+    compileOnly(name: 'Vault', ext: 'jar')
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '2.6.1'
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
