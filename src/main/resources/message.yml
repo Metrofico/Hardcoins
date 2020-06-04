@@ -1,0 +1,85 @@
+# UTF-8 require.
+
+DontHavePermission: "&cNo tienes permisos!!"
+AccountNotFound: "&cCuenta de dinero no encontrada."
+InvalidAmount: "&cLa cantidad mencionada no es valida."
+UnknownError: "&cError desconocido..."
+
+# Available macro: [%player%],[%balance%]
+Show:
+  Me: "&eTu saldo es de &a[%balance%]"
+  Success: "&aEl saldo de &e[%player%] &aes de &f[%balance%]."
+
+# Available macro: [%player%],[%balance%]
+Pay:
+  NotEnough: "&cNo tienes suficiente saldo para realizar esta transaccion."
+  Self: "&cNo puedes enviarte dinero a ti mismo."
+  Success: "&aEnviastes [%balance%] a [%player%]."
+  Receive: "&aHas recibido [%balance%] de [%player%]."
+
+Top:
+  Empty: "&cEl resultado esta vacio."
+# Available macro: [%page%]
+  First: "&a======&r Ranking WyCoins (Pagina:[%page%]) &a======"
+# Available macro: [%player%],[%balance%],[%rank%]
+  Entry: "&7[%rank%]&f.- &a[%player%] &e([%balance%])"
+
+# Available macro: [%player%],[%balance%]
+Give:
+  Success: "&aAumentastes [%balance%] de saldo a [%player%]."
+
+# Available macro: [%player%],[%balance%]
+Take:
+  NotEnough: "&cNo tiene suficientes fondos para quitar saldo"
+  Success: "&aTomastes [%balance%] de la cuenta de [%player%]."
+
+# Available macro: [%player%],[%balance%]
+Set:
+  Success: "&aSaldo establecido a [%player%] con un monto de [%balance%]."
+
+# Available macro: [%player%],[%balance%]
+Create:
+  Exists: "&cLa cuenta ya existe."
+  Success: "&aCuenta creada para [%player%] con saldo de [%balance%]."
+
+# Available macro: [%player%],[%balance%]
+Remove:
+  Success: "&aCuenta removida de [%player%] account(Balance:[%balance%])."
+
+# //*<!-- Help message. -->*/
+Help:
+  Show: "Muestra saldo de un jugador [player]"
+  Pay: "Pagas un monto de saldo a un jugador."
+  Top: "Muestra el TOP de jugadores de saldo."
+  Give: "Das saldo a un jugador."
+  Take: "Tomas el saldo de un jugador"
+  Set: "Establece una cantidad de saldo a un jugador."
+  Create: "Crea una cuenta de un jugador para tener saldo."
+  Remove: "Elminas una cuenta de un jugador."
+  Reload: "Recargas la cuenta."
+  Help: "Muestra esta Ayuda."
+
+# //*<!-- Color codes. -->*/
+# &0->Black(#000000)
+# &1->Dark Blue(#0000AA)
+# &2->Dark Green(#00AA00)
+# &3->Dark Aqua(#00AAAA)
+# &4->Dark Red(#AA0000)
+# &5->Purple(#AA00AA)
+# &6->Gold(#FFAA00)
+# &7->Gray(#AAAAAA)
+# &8->Dark Gray(#555555)
+# &9->Blue(#5555FF)
+# &a->Green(#55FF55)
+# &b->Aqua(#55FFFF)
+# &c->Red(#FF5555)
+# &d->Light Purple(#FF55FF)
+# &e->Yellow(#FFFF55)
+# &f->White(#FFFFFF)
+# &k->Obfuscated
+# &l->Bold
+# &m->Strikethrough
+# &n->Underline
+# &o->Italic
+# &r->Reset
+# &&->Escape the color code.

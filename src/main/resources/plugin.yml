@@ -1,0 +1,59 @@
+main: jp.jyn.jecon.Jecon
+name: Hardcon
+version: 3.0BETA
+authors: [HimaJyun, Metrofico]
+load: STARTUP
+loadbefore: [Vault]
+
+commands:
+   eco:
+      description: '"/eco help" - Muestra ayuda.'
+      aliases: hardcadmin
+permissions:
+  hardcon.*:
+    children:
+      hardcon.show: true
+      hardcon.show.other: true
+      hardcon.give: true
+      hardcon.take: true
+      hardcon.set: true
+      hardcon.create: true
+      hardcon.remove: true
+      hardcon.top: true
+      hardcon.reload: true
+      hardcon.pay: true
+  hardcon.user:
+    children:
+      hardcon.show: true
+      hardcon.pay: true
+  hardcon.op:
+    children:
+      hardcon.show.other: true
+      hardcon.give: true
+      hardcon.take: true
+      hardcon.set: true
+      hardcon.create: true
+      hardcon.remove: true
+      hardcon.top: true
+      hardcon.pay: true
+      hardcon.reload: true
+  hardcon.show:
+    default: true
+  hardcon.pay:
+    default: true
+  hardcon.show.other:
+    default: op
+  hardcon.give:
+    default: op
+  hardcon.take:
+    default: op
+  hardcon.set:
+    default: op
+  hardcon.create:
+    default: op
+  hardcon.remove:
+    default: op
+  hardcon.top:
+    default: op
+  hardcon.reload:
+    default: op
